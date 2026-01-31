@@ -1,0 +1,17 @@
+[project]
+name = "streamlit-ev-sg"
+version = "2.0.0"
+description = "Events Validator UI - SG opensource (Free Cloud Edition)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "supabase>=2.3.0",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "reportlab>=4.4.7",
+    "streamlit>=1.52.2",
+    "streamlit-option-menu>=0.4.0",
+    "altair>=6.0.0",
+    "polars>=1.37.0",
+    "pyarrow>=22.0.0",
+]

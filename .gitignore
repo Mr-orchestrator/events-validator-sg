@@ -1,0 +1,69 @@
+# SG opensource Events Validator - .gitignore
+
+.dev/
+
+# --- Dependencies ---
+node_modules/
+package-lock.json
+
+# --- Environment files (NEVER commit these) ---
+.env
+**/.env
+.env.local
+.env.production
+
+# --- System files ---
+.DS_Store
+Thumbs.db
+*.log
+
+# --- Python / Streamlit ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.streamlit/secrets.toml
+uv.lock
+
+# --- Tests / cache ---
+.pytest_cache/
+.mypy_cache/
+.cache/
+.coverage
+htmlcov/
+
+# --- Credentials (NEVER commit) ---
+credentials.json
+*-terraform-sandbox-*.json
+*service-account*.json
+*.pem
+*.key
+
+# --- Terraform ---
+.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/state.json
+**/code.zip
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+
+# --- Build outputs ---
+dist/
+build/
+*.zip
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Allow these files ---
+!.env.example
+!*.tfvars.example
+!package.json
+!supabase_schema.sql

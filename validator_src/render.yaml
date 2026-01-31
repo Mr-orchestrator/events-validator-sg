@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: events-validator-sg
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: STORAGE_BUCKET
+        value: schemas
+      - key: DB_TABLE
+        value: event_logs
+      - key: EVENT_NAME_ATTRIBUTE
+        value: event_name
+      - key: EVENT_DATA_PATH
+        value: data
+      - key: LOG_VALID_FIELDS
+        value: "true"
